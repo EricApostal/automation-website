@@ -11,7 +11,14 @@ class Home extends StatelessWidget {
       children: [
         Stack(children: [
           Image.asset('assets/images/background.png'),
-          Center(child: Center(child: Image.asset('assets/images/title.png'))),
+          Center(
+            child: Column(
+              children: [
+                const NavBar(),
+                Center(child: Image.asset('assets/images/title.png'))
+              ],
+            ),
+          ),
         ]),
       ],
     );

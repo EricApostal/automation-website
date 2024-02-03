@@ -1,3 +1,4 @@
+import 'package:automation_website/components/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_all/webview_all.dart';
 
@@ -21,8 +22,13 @@ class MyBrowser extends StatefulWidget {
 class _MyBrowserState extends State<MyBrowser> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body:
-            Center(child: Webview(url: "http://play.automationmc.net:25567/")));
+    return Scaffold(
+        body: Column(children: [
+      const NavBar(),
+      SizedBox(
+          width: MediaQuery.sizeOf(context).width,
+          height: MediaQuery.sizeOf(context).height,
+          child: const Webview(url: "http://play.automationmc.net:25567/"))
+    ]));
   }
 }

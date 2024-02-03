@@ -18,7 +18,7 @@ class _NavButtonState extends State<NavButton> {
       decoration: BoxDecoration(),
       child: TextButton(
         onPressed: () {
-          Navigator.pushNamed(context, widget.route);
+          Navigator.pushReplacementNamed(context, widget.route);
         },
         style: ButtonStyle(
             splashFactory: NoSplash.splashFactory,
