@@ -26,9 +26,9 @@ class _MyBrowserState extends State<MyBrowser> {
         body: Column(children: [
       const NavBar(),
       SizedBox(
-          width: MediaQuery.sizeOf(context).width,
-          height: MediaQuery.sizeOf(context).height,
-          child: const Webview(url: "http://play.automationmc.net:25567/"))
+        width: MediaQuery.sizeOf(context).width,
+        height: MediaQuery.sizeOf(context).height - 50,
+        child: const Webview(url: "http://play.automationmc.net:25567/"))
     ]));
   }
 }

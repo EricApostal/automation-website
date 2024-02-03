@@ -16,9 +16,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Automation',
       initialRoute: '/',
-      routes: {
-        '/': (context) => const Home(),
-        '/map': (context) => const WorldMap(),
+      // routes: {
+      //   '/': (context) => const Home(),
+      //   '/map': (context) => const WorldMap(),
+      // },
+      
+      onGenerateRoute:(settings) {
+        print("route generated");
       },
       theme: ThemeData(
         fontFamily:
@@ -30,15 +34,8 @@ class MyApp extends StatelessWidget {
             secondary: Color(0xFFA8A8A8)),
         useMaterial3: true,
       ),
+
+      home: const Home()
     );
   }
-}
-
-void removePageRouteAnimation(BuildContext context, String routeName) {
-  Navigator.pushNamedAndRemoveUntil(
-    context,
-    routeName,
-    (route) => false,
-    arguments: {}, // You can pass arguments if needed
-  );
 }

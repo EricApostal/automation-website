@@ -1,3 +1,4 @@
+import 'package:automation_website/routes.dart';
 import 'package:flutter/material.dart';
 
 class NavButton extends StatefulWidget {
@@ -18,7 +19,17 @@ class _NavButtonState extends State<NavButton> {
       decoration: BoxDecoration(),
       child: TextButton(
         onPressed: () {
-          Navigator.pushReplacementNamed(context, widget.route);
+          // Navigator.pushReplacementNamed(context, widget.route);
+          Navigator.pushAndRemoveUntil(
+            context,
+            PageRouteBuilder(
+              settings: RouteSettings(name: widget.route),
+              pageBuilder: (_, __, ___) {
+                return routes[widget.route]!(context);
+              },
+            ),
+            (route) => false,
+          );
         },
         style: ButtonStyle(
             splashFactory: NoSplash.splashFactory,
