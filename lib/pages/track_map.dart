@@ -2,8 +2,8 @@ import 'package:automation_website/components/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_all/webview_all.dart';
 
-class WorldMap extends StatelessWidget {
-  const WorldMap({super.key});
+class TrackMap extends StatelessWidget {
+  const TrackMap({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _MyBrowserState extends State<MyBrowser> {
       SizedBox(
         width: MediaQuery.sizeOf(context).width,
         height: MediaQuery.sizeOf(context).height - 53,
-        child: const Webview(url: "http://play.automationmc.net:25567/"))
+        child: const Webview(url: "http://play.automationmc.net:25575/"))
     ]));
   }
 }
