@@ -35,7 +35,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home: const Home()
+      home: DefaultTextStyle(
+        style: TextStyle(
+          fontFamily: GoogleFonts.inriaSans(fontWeight: FontWeight.bold, fontSize: 60)
+                .fontFamily,
+                
+        ),
+        child: const Home())
     );
   }
 }
