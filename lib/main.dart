@@ -14,34 +14,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Automation',
-      initialRoute: '/',
-      // routes: {
-      //   '/': (context) => const Home(),
-      //   '/map': (context) => const WorldMap(),
-      // },
-      
-      onGenerateRoute:(settings) {
-        print("route generated");
-      },
-      theme: ThemeData(
-        fontFamily:
-            GoogleFonts.inriaSans(fontWeight: FontWeight.bold, fontSize: 60)
-                .fontFamily,
-        colorScheme: const ColorScheme.dark(
-            background: Color(0xFF1B1B1C),
-            primary: Color(0xFF252527),
-            secondary: Color(0xFFA8A8A8)),
-        useMaterial3: true,
-      ),
-
-      home: DefaultTextStyle(
-        style: TextStyle(
-          fontFamily: GoogleFonts.inriaSans(fontWeight: FontWeight.bold, fontSize: 60)
-                .fontFamily,
-                
+        title: 'Automation',
+        initialRoute: '/',
+        onGenerateRoute: (settings) {
+          print("route generated");
+        },
+        theme: ThemeData(
+          fontFamily:
+              GoogleFonts.inriaSans(fontWeight: FontWeight.bold, fontSize: 60)
+                  .fontFamily,
+          colorScheme: const ColorScheme.dark(
+              background: Color(0xFF1B1B1C),
+              primary: Color(0xFF252527),
+              secondary: Color(0xFFA8A8A8)),
+          useMaterial3: true,
         ),
-        child: const Home())
-    );
+        home: DefaultTextStyle(
+            style: TextStyle(
+              fontFamily: GoogleFonts.inriaSans(
+                      fontWeight: FontWeight.bold, fontSize: 60)
+                  .fontFamily,
+            ),
+            child: const Home()));
   }
 }
