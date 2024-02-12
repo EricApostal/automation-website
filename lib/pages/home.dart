@@ -90,6 +90,38 @@ class Home extends StatelessWidget {
           ]),
         ),
         Container(
+          height: 300,
+          decoration: const BoxDecoration(color: Color(0xFF252527)),
+          child: Stack(
+            children: [
+              Center(
+                child: Container(
+                  width: 190,
+                  height: 75,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      color: Color(0xFF00A1FB)),
+                  child: TextButton(
+                    onPressed: () {
+                      window.open(
+                          'https://modrinth.com/modpack/automation', 'new tab');
+                    },
+                    style: ButtonStyle(
+                        splashFactory: NoSplash.splashFactory,
+                        overlayColor: MaterialStateColor.resolveWith(
+                            (states) => Colors.transparent)),
+                    child: Text(
+                      "Start Your Empire",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
             height: 80,
             decoration: const BoxDecoration(color: Color(0xFF1B1B1C)),
             child: Center(
