@@ -1,8 +1,8 @@
-import 'package:automation_website/pages/home.dart';
-import 'package:automation_website/pages/map.dart';
+import 'package:Automation/pages/home.dart';
+import 'package:Automation/pages/map.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:automation_website/components/nav.dart';
+import 'package:Automation/components/nav.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         title: 'Automation',
         initialRoute: '/',
         onGenerateRoute: (settings) {
-          print("route generated");
+          // print("route generated");
         },
         theme: ThemeData(
           fontFamily:

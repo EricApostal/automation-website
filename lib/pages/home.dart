@@ -1,9 +1,9 @@
 import 'dart:html';
 
-import 'package:automation_website/components/info_card.dart';
+import 'package:Automation/components/info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:automation_website/components//nav.dart';
+import 'package:Automation/components//nav.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

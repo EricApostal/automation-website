@@ -1,4 +1,4 @@
-import 'package:automation_website/routes.dart';
+import 'package:Automation/routes.dart';
 import 'package:flutter/material.dart';
 
 class NavButton extends StatefulWidget {
@@ -36,8 +36,8 @@ class _NavButtonState extends State<NavButton> {
                 },
                 style: ButtonStyle(
                     splashFactory: NoSplash.splashFactory,
-                    overlayColor:
-                        MaterialStateColor.resolveWith((states) => Colors.transparent)),
+                    overlayColor: MaterialStateColor.resolveWith(
+                        (states) => Colors.transparent)),
                 child: Text(widget.text,
                     style: const TextStyle(
                         color: Color.fromARGB(255, 255, 255, 255),
@@ -47,7 +47,12 @@ class _NavButtonState extends State<NavButton> {
               Container(
                 height: 5,
                 width: 5,
-                decoration: BoxDecoration(color: (ModalRoute.of(context)!.settings.name == widget.route) ? const Color.fromARGB(255, 94, 250, 159): const Color.fromARGB(0, 0, 0, 255)),)
+                decoration: BoxDecoration(
+                    color:
+                        (ModalRoute.of(context)!.settings.name == widget.route)
+                            ? const Color.fromARGB(255, 94, 250, 159)
+                            : const Color.fromARGB(0, 0, 0, 255)),
+              )
             ],
           ),
         ),
