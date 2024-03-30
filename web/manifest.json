@@ -1,11 +1,11 @@
 {
-    "name": "automation_website",
-    "short_name": "automation_website",
+    "name": "Automation",
+    "short_name": "Automation",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "The finest modded Minecraft Server.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

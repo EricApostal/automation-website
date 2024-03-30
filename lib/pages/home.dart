@@ -89,7 +89,7 @@ class Home extends StatelessWidget {
               const InfoCard(
                 title: "Play with friends",
                 description:
-                    "Do you not have friends? Don’t worry, just load up play.automationmc.net! This is a server utilizing the hybrid server jar “arclight”, so we don’t have to sacrifice features found on common survival servers.",
+                    "Do you not have friends? Don’t worry, just load up play.automationmc.net! This is a hybrid server server, so we don’t have to sacrifice features found on common survival servers.",
                 imagePath: 'assets/images/friends.webp',
                 orientation: 1,
               ),
@@ -116,7 +116,7 @@ class Home extends StatelessWidget {
                           splashFactory: NoSplash.splashFactory,
                           overlayColor: MaterialStateColor.resolveWith(
                               (states) => Colors.transparent)),
-                      child: Text(
+                      child: const Text(
                         "Start Your Empire",
                         style: TextStyle(color: Colors.white, fontSize: 20),
                         textAlign: TextAlign.center,
@@ -131,12 +131,15 @@ class Home extends StatelessWidget {
               height: 80,
               decoration: const BoxDecoration(color: Color(0xFF1B1B1C)),
               child: Center(
-                  child: Text(
-                "Copyright© of absolutely nobody. I don’t know how to do that.",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Theme.of(context).colorScheme.secondary),
-                textAlign: TextAlign.center,
+                  child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Text(
+                  "Copyright© of absolutely nobody. I don’t know how to do that.",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Theme.of(context).colorScheme.secondary),
+                  textAlign: TextAlign.center,
+                ),
               )))
         ],
       ),
