@@ -1,6 +1,6 @@
-# automation_website
+# Automation Website
 
-A new Flutter project.
+The finest modded Minecraft Server.
 
 ## Getting Started
 

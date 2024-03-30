@@ -4,6 +4,7 @@ import 'package:Automation/components/info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:Automation/components//nav.dart';
+import 'package:typewritertext/typewritertext.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -26,41 +27,45 @@ class Home extends StatelessWidget {
                       color: Colors.grey.withOpacity(1),
                       spreadRadius: 20,
                       blurRadius: 7,
-                      offset: Offset(0, 3), // changes position of shadow
+                      offset: const Offset(0, 3), // changes position of shadow
                     ),
                   ],
                 ),
-                child: Image.asset('assets/images/background.png')),
+                child: (MediaQuery.of(context).size.shortestSide < 600)
+                    ? Image.asset(
+                        'assets/images/background.png',
+                        height: MediaQuery.of(context).size.height,
+                        fit: BoxFit.cover,
+                      )
+                    : Image.asset(
+                        'assets/images/background.png',
+                      )),
             Center(
               child: Column(
                 children: [
                   const NavBar(),
-                  Center(child: Image.asset('assets/images/title.png'))
+                  Center(child: Image.asset('assets/images/title.png')),
                 ],
               ),
             ),
-            // Positioned(
-            //     bottom: MediaQuery.sizeOf(context).height * 0.33,
-            //     child: Container(
-            //       width: 180,
-            //       height: 60,
-            //       decoration: const BoxDecoration(
-            //           borderRadius: BorderRadius.all(Radius.circular(12)),
-            //           color: Color(0xFF00A1FB)),
-            //       child: TextButton(
-            //         onPressed: () {},
-            //         style: ButtonStyle(
-            //             splashFactory: NoSplash.splashFactory,
-            //             overlayColor: MaterialStateColor.resolveWith(
-            //                 (states) => Colors.transparent)),
-            //         child: const Center(
-            //             child: Text(
-            //           "Let's Get Started",
-            //           style: TextStyle(color: Colors.white, fontSize: 20),
-            //           textAlign: TextAlign.center,
-            //         )),
-            //       ),
-            //     ))
+            // (MediaQuery.of(context).size.shortestSide < 600)
+            //     ? Positioned(
+            //         bottom: MediaQuery.sizeOf(context).height * 0.2,
+            //         child: TypeWriterText(
+            //           text: Text(
+            //             'The future of Modded Minecraft ',
+            //             style: TextStyle(
+            //               fontSize: 30,
+            //               color: Colors.white,
+            //               fontFamily: GoogleFonts.inriaSans(
+            //                       fontWeight: FontWeight.bold, fontSize: 60)
+            //                   .fontFamily,
+            //             ),
+            //             softWrap: true,
+            //           ),
+            //           duration: const Duration(milliseconds: 50),
+            //         ))
+            //     : const SizedBox()
           ]),
           Container(
             decoration: const BoxDecoration(color: Color(0xFF1B1B1C)),

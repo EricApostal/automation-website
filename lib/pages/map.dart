@@ -27,7 +27,7 @@ class _MyBrowserState extends State<MyBrowser> {
       const NavBar(),
       SizedBox(
           width: MediaQuery.sizeOf(context).width,
-          height: MediaQuery.sizeOf(context).height - 53,
+          height: MediaQuery.sizeOf(context).height - 69,
           child: const Webview(url: "http://play.automationmc.net:25567/"))
     ]));
   }

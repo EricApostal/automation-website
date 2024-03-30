@@ -63,7 +63,7 @@ class InfoCard extends StatelessWidget {
           child: (MediaQuery.of(context).size.shortestSide < 600)
               ? Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 32),
+                    padding: const EdgeInsets.only(left: 0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
